@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+
+        body {
+            width:720px;height:576px;
+        }
+
+        #gameSurface {
+            width: 720px;
+            height: 576px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 1px solid gray;
+            background-color: #2a2a2a;
+        }
+
+            #gameSurface > div {
+                display: inline-block;
+            }
+
+        #cardArea {
+            border: 1px solid #FFFFFF;
+            width: 349px;
+            height: 431px;
+            margin-left: 55px;
+            margin-top: 69px;
+            padding: 5px;
+        }
+
+            #cardArea > div {
+                border-radius: 5px;
+                margin: 2px;
+                width: 80px;
+                height: 100px;
+                display:inline-block;
+                background-image:url("IMG/card_bg.gif");
+            }
+
+        #gameControl {
+            height: 441px;
+            width: 200px;
+            margin-left: 50px;
+            vertical-align: top;
+            margin-top: 69px;
+        }
+
+        #logo {
+            margin-bottom: 10px;
+        }
+
+        #gameInfo {
+            width: 200px;
+            height: 200px;
+            background-color: #808080;
+            margin-bottom: 85px;
+            font-size: 25px;
+        }
+
+        #highScore, #currentScore {
+            padding: 10px;
+        }
+
+        #restartBtn {
+            width: 200px;
+            height: 60px;
+            background-color: #808080;
+        }
+
+            #restartBtn > input {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                font-size: 25px;
+                cursor:pointer;
+            }
+
+        .Selected {
+            width: 72px!important;
+            height: 92px!important;
+            border: 4px solid green;
+        }
+
+        .Hovered {
+            width: 72px!important;
+            height: 92px!important;
+            border: 4px solid red;
+        }
+    </style>
+
+    <script src="JS/jquery.min.js"></script>
+
+    <script type="text/javascript" src="JS/Game.js"></script>
+
+</head>
+<body>
+    <div id="gameSurface">
+        <div id="cardArea">
+            <div id="card_0" class="Hovered"></div>
+            <div id="card_1"></div>
+            <div id="card_2"></div>
+            <div id="card_3"></div>
+            <div id="card_4"></div>
+            <div id="card_5"></div>
+            <div id="card_6"></div>
+            <div id="card_7"></div>
+            <div id="card_8"></div>
+            <div id="card_9"></div>
+            <div id="card_10"></div>
+            <div id="card_11"></div>
+            <div id="card_12"></div>
+            <div id="card_13"></div>
+            <div id="card_14"></div>
+            <div id="card_15"></div>
+        </div>
+        <div id="gameControl">
+            <div id="logo">
+                <img src="IMG/logo.png" />
+            </div>
+            <div id="gameInfo">
+                <div id="highScore">
+                    <div style="text-align: center; margin-bottom: 5px;">High Score</div>
+                    <div style="font-size: 20px;text-align:center" id="topScore">None</div>
+                </div>
+                <div id="currentScore">
+                    <div style="text-align: center; margin-bottom: 5px;">Current Player</div>
+                    <div style="font-size: 20px" id="GameScore">Score: 0</div>
+                </div>
+            </div>
+            <div id="restartBtn">
+                <input type="button" value="Restart game" />
+            </div>
+        </div>
+    </div>
+    <form action="UserDetailsForm.php" method="post" id="scoreForm">
+        <input type="hidden" value="" name="Score" id="score" />
+    </form>
+</body>
+</html>
